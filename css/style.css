@@ -1,0 +1,360 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Nunito', sans-serif;
+     text-decoration: none;
+     scroll-behavior: smooth;
+}
+:root {
+    --branco: rgb(255, 255, 255);
+    --preto: rgb(22, 26, 29);
+    --pretoGradient: linear-gradient(178deg, rgb(2, 13, 22), rgb(4, 26, 48));
+    --azul: rgb(62, 158, 236);
+    --azulEscuro: rgb(34, 121, 197);
+    --azulGradient: linear-gradient(126deg, rgb(42, 133, 215), rgb(33, 114, 185));
+    --azulGradientTransparente: linear-gradient(-100deg, rgba(42, 134, 215, 0.212), rgb(0, 49, 93));
+
+}
+/* ===================== > CLASSES GLOBAIS*/
+.centralizar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ===================== > CLASSES GLOBAIS FIM*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-image: var(--pretoGradient);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 5px solid var(--azul);
+    z-index: 1;
+}
+.logo a img{
+    width: 200px;
+    
+    margin-left: 20px;
+}
+/* ===================== > MENU DESKTOP*/
+.menu ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    gap: 20px;
+}
+.menu ul li a {
+    color: var(--azul);
+    transition: color .5s;
+}
+.menu ul li a:hover {
+    color: var(--branco)
+}
+.menu ul .btn-mobile {
+    display: none;
+    color: var(--branco);
+    font-size: 30px;
+}
+.menu ul .btn-mobile:hover {
+    cursor: pointer;
+    color: var(--azul);
+}
+/* ===================== > MENU DESKTOP FIM*/
+
+/* ===================== > MENU MOBILE*/
+
+.menu-mobile {
+    position: absolute;
+    top: 90px;
+    width: 100%;
+    height: 0;
+    background-color: var(--preto);
+    overflow: hidden;
+    transition: height .3s;
+}
+.menu-mobile ul {
+    list-style: none;
+    text-align: center;
+}
+.menu-mobile ul li a {
+    display: block;
+    padding: 15px 0;
+    color: var(--branco);
+}
+.menu-mobile ul li a:hover {
+    background-color: var(--azul);
+}
+.mostrar-menu-mobile {
+    height: 260px;
+}
+/* ===================== > MENU MOBILE FIM*/
+
+/* ===================== > CAROUSEL*/
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    margin-top: 90px;
+}
+.carousel .area-banner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.carousel .area-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel .area-banner .conteudo-banner {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.carousel .area-banner .conteudo-banner div {
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+}
+.carousel .area-banner .conteudo-banner div h2 {
+    font-family: sans-serif;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.carousel .area-banner .conteudo-banner div p {
+    font-size: 20px;
+}
+.carousel .area-banner .conteudo-banner div h2,
+.carousel .area-banner .conteudo-banner div p {
+    color: var(--branco);
+    text-shadow: 0 0 10px var(--preto);
+}
+.carousel .botoes {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between !important;
+}
+.carousel .botoes .btn-left,
+.carousel .botoes .btn-right {
+    font-size: 45px;
+    margin: 30px;
+    padding: 8px 5px;
+    color: rgba(190, 190, 190, 0.74);
+    transition: all .3s;
+}
+.carousel .botoes .btn-left {
+    border-radius: 5px 0 0 5px;
+}
+.carousel .botoes .btn-right {
+    border-radius: 0 5px 5px 0;
+}
+.carousel .botoes i:hover {
+    cursor: pointer;
+    color: var(--branco);
+    background-image: linear-gradient(-100deg, rgba(42, 134, 215, 0.212), rgb(28, 131, 221));
+}
+.carousel .botoes .btn-right:hover {
+    background-image: linear-gradient(100deg, rgba(42, 134, 215, 0.212), rgb(28, 131, 221))
+    !important;
+}
+/* ===================== > CAROUSEL FIM*/
+
+/* ===================== > QUEM SOMOS*/
+
+.quem-somos {
+    background-image: var(--pretoGradient);
+    padding: 100px 0;
+    color: var(--branco);
+}
+.quem-somos div {
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    flex-direction: column;
+}
+.quem-somos div h2 {
+    font-size: 45px;
+    margin: 0 0 20px;
+    font-family: sans-serif;
+}
+.quem-somos div a {
+    width: 250px;
+    height: 50px;
+    margin: 40px 0 0;
+    font-weight: 700;
+    border: none;
+    border-radius: 3px;
+    color: var(--branco);
+    background-color: var(--azul);
+}
+.quem-somos div a:hover {
+    cursor: pointer;
+    background-color: var(--azulEscuro);
+}
+.quem-somos div a i {
+    font-size: 25px;
+    margin: 0 10px;
+}
+/* ===================== > QUEM SOMOS FIM*/
+
+/* ===================== > SERVIÇOS*/
+.servicos {
+    flex-wrap: wrap;
+    padding: 100px 0;
+    gap: 20px;
+}
+.servicos .card {
+    width: 90%;
+    max-width: 650px;
+    min-height: 120px;
+    color: var(--branco);
+    background-image: var(--azulGradient);
+    padding: 20px;
+    gap: 20px;
+    border-radius: 5px;
+    justify-content: left;
+    box-shadow: 0 0 20px rgb(190, 190, 190);
+}
+.servicos .card img {
+    width: 60px;
+    padding: 10px;
+    background-color: var(--branco);
+    border-radius: 500px;
+}
+.servicos .card div h3 {
+    font-family: sans-serif;
+}
+/* ===================== > SERVIÇOS FIM*/
+
+/* ===================== > FALE CONOSCO*/
+
+.fale-conosco {
+    width: 100%;
+    padding: 100px 0;
+    color: var(--branco);
+    background-color: var(--preto);
+}
+.fale-conosco .fale-conosco-conteudo {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+.fale-conosco-conteudo h2 {
+    font-size: 45px;
+    font-family: sans-serif;
+    margin: 0 0 20px;
+}
+.fale-conosco-conteudo p {
+    margin: 0 0 40px;
+}
+.fale-conosco .fale-conosco-conteudo form {
+    text-align: left;
+    display: grid;
+}
+.fale-conosco .fale-conosco-conteudo form select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url(../img/down-dois.png) no-repeat center right #FFF;
+    padding: 14px 20px !important;
+}
+.fale-conosco .fale-conosco-conteudo form input,
+.fale-conosco .fale-conosco-conteudo form select,
+.fale-conosco .fale-conosco-conteudo form textarea {
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 3px;
+    resize: vertical;
+    outline-color: var(--azul);
+}
+.fale-conosco .fale-conosco-conteudo form textarea {
+    margin: 25px 0;
+}
+.fale-conosco .fale-conosco-conteudo form input[type=submit] {
+    padding: 15px 0;
+    font-size: 20px;
+    color: var(--branco);
+    background-color: var(--azul);
+}
+.fale-conosco .fale-conosco-conteudo form input[type=submit]:hover {
+    cursor: pointer;
+    background-color: rgb(34, 121, 197);
+}
+/* ===================== > FALE CONOSCO FIM*/
+
+/* ===================== > RODAPÉ*/
+
+footer {
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 20px 20px 40px;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+footer strong {
+    font-family: sans-serif;
+}
+.endereco p,
+.horario p {
+    margin: 0 0 10px;
+}
+.horario .midias-sociais a i {
+    font-size: 20px;
+    padding: 10px;
+    border: 1.5px solid var(--branco);
+    border-radius: 50%;
+    color: var(--branco);
+}
+.horario .midias-sociais a i:hover {
+    color: var(--preto);
+    background-color: var(--branco);
+}
+
+
+@media screen and (max-width: 960px) {
+    .menu ul li {
+       display: none;
+    }
+    .menu ul .btn-mobile {
+        display: block;
+    }
+    .mapa {
+        display: none;
+    }
+}
+@media screen and (max-width: 720px) {
+    .carousel .area-banner .conteudo-banner div {
+        width: 85%;
+    }
+    .carousel .area-banner .conteudo-banner div h2 {
+        font-size: 32px;
+    }
+    .carousel .botoes .btn-left,
+    .carousel .botoes .btn-right {
+        margin: 5px;
+    }
+    .quem-somos div h2 {
+        font-size: 32px;
+    }
+    .fale-conosco-conteudo h2 {
+        font-size: 32px;
+    }
+}
+@media screen and (max-width: 540px) {
+    .carousel .area-banner .conteudo-banner div {
+        width: 75%;
+    }
+}
