@@ -253,6 +253,7 @@ header {
 .galeria .modal-content .img-card {
     width: 300px;
     height: 400px;
+    transition: all .5s;
 }
 .galeria .modal-content .img-card img {
     width: 100%;
@@ -292,7 +293,8 @@ header {
     position: absolute;
     width: 80%;
     max-width: 700px;
-    height: 92%;
+    height: 700px;
+    transition: all .5s;
 }
 .galeria .img-modal img {
     width: 100%;
@@ -425,6 +427,9 @@ footer strong {
     .carousel .botoes .btn-right {
         margin: 5px;
     }
+    .galeria .img-modal {
+        height: 600px;
+    }
 }
 @media screen and (max-width: 720px) {
     .carousel .area-banner .conteudo-banner div {
@@ -435,9 +440,16 @@ footer strong {
     .fale-conosco-conteudo h2 {
         font-size: 2.1rem;
     }
+    .galeria .img-modal {
+        height: 500px;
+    }
+    
 }
 @media screen and (max-width: 540px) {
     .carousel .area-banner .conteudo-banner div {
         width: 75%;
+    }
+    .galeria .img-modal {
+        height: 400px;
     }
 }
