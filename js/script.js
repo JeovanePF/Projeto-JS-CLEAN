@@ -1,6 +1,10 @@
 let btnLeft = document.querySelector('.btn-left')
 let btnRight = document.querySelector('.btn-right')
 let btnMobile = document.querySelector('.btn-mobile')
+let btnClose = document.querySelector('.btn-close')
+let modalImg = document.querySelector('#img')
+let modal = document.querySelector('.modal')
+let elementosModal = document.querySelectorAll('.my-img')
 let slideIndex = 1
 
 btnMobile.addEventListener('click', function() {
@@ -39,3 +43,14 @@ function showSlides(index) {
 }
 
 setInterval(automatic, 6000)
+
+btnClose.addEventListener('click', function() {
+    
+    modal.style.display = 'none'
+})
+
+function imgZoom(index) {
+    let newImg = elementosModal[index]
+    modal.style.display = 'flex'
+    modalImg.src = newImg.src
+}

@@ -5,6 +5,7 @@
      font-family: 'Nunito', sans-serif;
      text-decoration: none;
      scroll-behavior: smooth;
+     font-size: 100%;
 }
 :root {
     --branco: rgb(255, 255, 255);
@@ -38,7 +39,6 @@ header {
 }
 .logo a img{
     width: 200px;
-    
     margin-left: 20px;
 }
 /* ===================== > MENU DESKTOP*/
@@ -50,6 +50,7 @@ header {
     gap: 20px;
 }
 .menu ul li a {
+    font-size: 1.1rem;
     color: var(--azul);
     transition: color .5s;
 }
@@ -86,12 +87,13 @@ header {
     display: block;
     padding: 15px 0;
     color: var(--branco);
+    font-size: 1.1rem;
 }
 .menu-mobile ul li a:hover {
     background-color: var(--azul);
 }
 .mostrar-menu-mobile {
-    height: 260px;
+    height: 270px;
 }
 /* ===================== > MENU MOBILE FIM*/
 
@@ -126,11 +128,11 @@ header {
 }
 .carousel .area-banner .conteudo-banner div h2 {
     font-family: sans-serif;
-    font-size: 40px;
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 .carousel .area-banner .conteudo-banner div p {
-    font-size: 20px;
+    font-size: 1.1rem;
 }
 .carousel .area-banner .conteudo-banner div h2,
 .carousel .area-banner .conteudo-banner div p {
@@ -178,14 +180,17 @@ header {
 }
 .quem-somos div {
     width: 90%;
-    max-width: 700px;
+    max-width: 800px;
     text-align: center;
     flex-direction: column;
 }
 .quem-somos div h2 {
-    font-size: 45px;
+    font-size: 2.5rem;
     margin: 0 0 20px;
     font-family: sans-serif;
+}
+.quem-somos div p {
+    font-size: 1.1rem;
 }
 .quem-somos div a {
     width: 250px;
@@ -202,7 +207,7 @@ header {
     background-color: var(--azulEscuro);
 }
 .quem-somos div a i {
-    font-size: 25px;
+    font-size: 2rem;
     margin: 0 10px;
 }
 /* ===================== > QUEM SOMOS FIM*/
@@ -235,7 +240,68 @@ header {
     font-family: sans-serif;
 }
 /* ===================== > SERVIÇOS FIM*/
+.galeria {
+    padding: 100px 0;
+    background-image: var(--azulGradient);
+}
+.galeria .modal-content {
+    width: 90%;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.galeria .modal-content .img-card {
+    width: 300px;
+    height: 400px;
+}
+.galeria .modal-content .img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 10px solid rgba(240, 240, 240, 0.856);
+    box-shadow: 0 0 20px rgba(16, 72, 124, 0.699);
+    transition: all .5s;
+}
+.galeria .modal-content .img-card:hover img {
+    cursor: pointer;
+    transform: scale(1.1);
+}
 
+.galeria .modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.galeria .modal .btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--branco);
+    font-size: 2rem;
+    margin: 25px;
+}
+.galeria .modal .btn-close:hover {
+    cursor: pointer;
+}
+.galeria .img-modal {
+    position: absolute;
+    width: 80%;
+    max-width: 700px;
+    height: 92%;
+}
+.galeria .img-modal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: zoom .5s;
+    border: 10px solid rgba(240, 240, 240, 0.856);
+    box-shadow: 0 0 20px rgba(16, 72, 124, 0.699);
+}
 /* ===================== > FALE CONOSCO*/
 
 .fale-conosco {
@@ -250,12 +316,13 @@ header {
     text-align: center;
 }
 .fale-conosco-conteudo h2 {
-    font-size: 45px;
+    font-size: 2.5rem;
     font-family: sans-serif;
     margin: 0 0 20px;
 }
 .fale-conosco-conteudo p {
     margin: 0 0 40px;
+    font-size: 1.1rem;
 }
 .fale-conosco .fale-conosco-conteudo form {
     text-align: left;
@@ -265,13 +332,13 @@ header {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: url(../img/down-dois.png) no-repeat center right #FFF;
-    padding: 14px 20px !important;
+    background: url(../img/down-dois.png) no-repeat center right rgb(255, 255, 255);
+    padding: 12px 20px !important;
 }
 .fale-conosco .fale-conosco-conteudo form input,
 .fale-conosco .fale-conosco-conteudo form select,
 .fale-conosco .fale-conosco-conteudo form textarea {
-    font-size: 14px;
+    font-size: .9rem;
     padding: 10px 20px;
     margin: 5px 0;
     border: none;
@@ -283,8 +350,8 @@ header {
     margin: 25px 0;
 }
 .fale-conosco .fale-conosco-conteudo form input[type=submit] {
-    padding: 15px 0;
-    font-size: 20px;
+    padding: 12px 0;
+    font-size: 1.1rem;
     color: var(--branco);
     background-color: var(--azul);
 }
@@ -324,6 +391,23 @@ footer strong {
 }
 
 
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes smallZoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
 @media screen and (max-width: 960px) {
     .menu ul li {
        display: none;
@@ -334,23 +418,22 @@ footer strong {
     .mapa {
         display: none;
     }
-}
-@media screen and (max-width: 720px) {
     .carousel .area-banner .conteudo-banner div {
         width: 85%;
-    }
-    .carousel .area-banner .conteudo-banner div h2 {
-        font-size: 32px;
     }
     .carousel .botoes .btn-left,
     .carousel .botoes .btn-right {
         margin: 5px;
     }
-    .quem-somos div h2 {
-        font-size: 32px;
+}
+@media screen and (max-width: 720px) {
+    .carousel .area-banner .conteudo-banner div {
+        width: 80%;
     }
+    .carousel .area-banner .conteudo-banner div h2,
+    .quem-somos div h2,
     .fale-conosco-conteudo h2 {
-        font-size: 32px;
+        font-size: 2.1rem;
     }
 }
 @media screen and (max-width: 540px) {
