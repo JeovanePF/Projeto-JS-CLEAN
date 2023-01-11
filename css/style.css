@@ -251,14 +251,14 @@ header {
     gap: 20px;
 }
 .galeria .modal-content .img-card {
-    width: 300px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     transition: all .5s;
 }
 .galeria .modal-content .img-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    
     border: 10px solid rgba(240, 240, 240, 0.856);
     box-shadow: 0 0 20px rgba(16, 72, 124, 0.699);
     transition: all .5s;
@@ -291,15 +291,14 @@ header {
 }
 .galeria .img-modal {
     position: absolute;
-    width: 80%;
-    max-width: 700px;
-    height: 700px;
+    width: 600px;
+    height: 600px;
     transition: all .5s;
 }
 .galeria .img-modal img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    
     animation: zoom .5s;
     border: 10px solid rgba(240, 240, 240, 0.856);
     box-shadow: 0 0 20px rgba(16, 72, 124, 0.699);
@@ -428,6 +427,7 @@ footer strong {
         margin: 5px;
     }
     .galeria .img-modal {
+        width: 600px;
         height: 600px;
     }
 }
@@ -441,6 +441,7 @@ footer strong {
         font-size: 2.1rem;
     }
     .galeria .img-modal {
+        width: 500px;
         height: 500px;
     }
     
@@ -450,6 +451,7 @@ footer strong {
         width: 75%;
     }
     .galeria .img-modal {
+        width: 400px;
         height: 400px;
     }
 }
