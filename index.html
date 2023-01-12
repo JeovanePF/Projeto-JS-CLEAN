@@ -17,7 +17,7 @@
 <body>
     <header>
         <div class="logo">
-            <a href="#home"><img src="img/logo-js.png" alt=""></a>
+            <a href="#"><img src="img/logo-js.png" alt=""></a>
         </div>
         <nav class="menu">
             <ul>
@@ -98,7 +98,9 @@
                 <p>
                     Somos uma empresa especializada em limpeza e higienização de todo tipo de estofados. Trabalhamos com os melhores produtos e equipamentos do mercado. Temos uma equipe qualificada e capacitada pronta para lhe atender e entregar o melhor resultado possível. Conheça um pouco de nosso trabalho no Instagram.
                 </p>
-                <a href="#" class="btn centralizar"><i class="fa fa-instagram"></i>INSTAGRAM</a>
+                <!--
+                <a href="https://www.instagram.com/jscleanlimpezahigienizacao/" class="btn centralizar" target="_blank"><i class="fa fa-instagram"></i>INSTAGRAM</a>
+                -->
             </div>
         </section>
 
@@ -142,6 +144,10 @@
         </section>
     
         <section class="galeria centralizar" id="galeria">
+            <div class="galeria-titulo">
+                <h2>GALERIA</h2>
+                <p>Veja alguns dos resultados do nosso trabalho clicando nas imagens.</p>
+            </div>
             <div class="modal-content centralizar">
                 <div class="img-card centralizar">
                     <img src="img/img01.jpeg" alt="" class="my-img" onclick="imgZoom(0)">
@@ -167,6 +173,10 @@
                 <div class="img-modal">
                     <img id="img">
                 </div>
+            </div>
+            <div class="veja-mais centralizar">
+                <p>Veja mais sobre o nosso serviço por meio de nossa rede social -></p>
+                <a href="https://www.instagram.com/jscleanlimpezahigienizacao/" class="btn centralizar" target="_blank"><i class="fa fa-instagram"></i>Veja mais!</a>
             </div>
         </section>
         
@@ -194,6 +204,7 @@
                     </select>
                     <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Deixe sua mensagem aqui..."></textarea>
                     <input type="submit" value="Enviar">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/APERFEI%C3%87OAMENTO/SITE%20JS%20CLEAN%2001/envio-form.html">
                 </form>
             </div>
         </section>

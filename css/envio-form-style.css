@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-size: 100%;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(62, 158, 236);
+}
+.msg {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    padding: 50px;
+    background-color: rgb(27, 119, 194);
+}
+.msg p {
+    color: rgb(255, 255, 255);
+    margin: 0 0 20px;
+}
+.msg p:nth-of-type(1) {
+    font-size: 1.6rem;
+}
+.msg a {
+    font-size: 1.6rem;
+    color: rgb(139, 199, 248);
+    font-weight: 700;
+}

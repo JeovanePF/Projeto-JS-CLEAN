@@ -42,7 +42,7 @@ function showSlides(index) {
     slides[slideIndex - 1].style.display = 'block'
 }
 
-setInterval(automatic, 6000)
+setInterval(automatic, 7000)
 
 btnClose.addEventListener('click', function() {
     
