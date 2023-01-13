@@ -12,12 +12,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
     <title>JS Clean</title>
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="#"><img src="img/logo-js.png" alt=""></a>
+            <a href="#"><img src="img/logo-js.png" alt="Logo"></a>
         </div>
         <nav class="menu">
             <ul>
@@ -98,9 +99,6 @@
                 <p>
                     Somos uma empresa especializada em limpeza e higienização de todo tipo de estofados. Trabalhamos com os melhores produtos e equipamentos do mercado. Temos uma equipe qualificada e capacitada pronta para lhe atender e entregar o melhor resultado possível. Conheça um pouco de nosso trabalho no Instagram.
                 </p>
-                <!--
-                <a href="https://www.instagram.com/jscleanlimpezahigienizacao/" class="btn centralizar" target="_blank"><i class="fa fa-instagram"></i>INSTAGRAM</a>
-                -->
             </div>
         </section>
 
@@ -150,22 +148,22 @@
             </div>
             <div class="modal-content centralizar">
                 <div class="img-card centralizar">
-                    <img src="img/img01.jpeg" alt="" class="my-img" onclick="imgZoom(0)">
+                    <img src="img/img01.jpeg" alt="Imagem-01 antes e depois da higienização" class="my-img" onclick="imgZoom(0)">
                 </div>
                 <div class="img-card">
-                    <img src="img/img02.jpeg" alt="" class="my-img" onclick="imgZoom(1)">
+                    <img src="img/img02.jpeg" alt="Imagem-02 antes e depois da higienização" class="my-img" onclick="imgZoom(1)">
                 </div>
                 <div class="img-card">
-                    <img src="img/img03.jpeg" alt="" class="my-img" onclick="imgZoom(2)">
+                    <img src="img/img03.jpeg" alt="Imagem-03 antes e depois da higienização" class="my-img" onclick="imgZoom(2)">
                 </div>
                 <div class="img-card">
-                    <img src="img/img04.jpeg" alt="" class="my-img" onclick="imgZoom(3)">
+                    <img src="img/img04.jpeg" alt="Imagem-04 antes e depois da higienização" class="my-img" onclick="imgZoom(3)">
                 </div>
                 <div class="img-card">
-                    <img src="img/img05.jpeg" alt="" class="my-img" onclick="imgZoom(4)">
+                    <img src="img/img05.jpeg" alt="Imagem-05 antes e depois da higienização" class="my-img" onclick="imgZoom(4)">
                 </div>
                 <div class="img-card">
-                    <img src="img/img06.jpeg" alt="" class="my-img" onclick="imgZoom(5)">
+                    <img src="img/img06.jpeg" alt="Imagem-06 antes e depois da higienização" class="my-img" onclick="imgZoom(5)">
                 </div>
             </div>
             <div class="modal centralizar">
@@ -187,12 +185,13 @@
                     Solicite o seu orçamento agora mesmo!<br> Preencha todos os campos logo abaixo e entraremos em contato com você!
                 </p>
                 <form action="https://formsubmit.co/jeovane9000@gmail.com" method="POST">
+                    <input type="hidden" name="_autoresponse" value="Obrigado por entrar em contato, retornaremos sua mensagem assim que possível!">
                     <label for="nome">Nome</label>
                     <input type="text" name="nome" id="nome" placeholder="Nome completo" required>
                     <label for="email">E-mail</label>
                     <input type="email" name="email" id="email" placeholder="Endereço de e-mail para contato" required>
                     <label for="telefone">Telefone</label>
-                    <input type="tel" name="telefone" id="telefone" placeholder="Telefone para contato" required>
+                    <input type="tel" name="telefone" id="telefone" placeholder="Telefone para contato" required maxlength="11">
                     <label for="servicos">Serviços</label>
                     <select name="servicos" id="servicos">
                         <option value="servico">Selecione um serviço...</option>
@@ -208,30 +207,39 @@
                 </form>
             </div>
         </section>
+        <div class="whatsApp-button">
+            <a href="https://wa.me/message/SHVZLI2MT22WB1" target="_blank"><img src="img/whatsapp.png" alt="whatsApp"><span class="whatsApp-container">Envie-nos uma mensagem por meio de nosso whatsApp para maior comodidade!</span></a>
+        </div>
     </main>
-    <footer>
-        <div class="endereco">
-            <p>
-                <strong>Endereço</strong><br> Travessa Palmeiras, N° 83 - Bahia Velha
-            </p>
-            <p>
-                <strong>Telefone</strong><br> (68) 99951-4999
-            </p>
-        </div>
-        <div class="mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.484496643569!2d-67.83537908521126!3d-9.976777809563053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x917f8dcaaa66f527%3A0x29fcd6e334a45f54!2sTv.%20das%20Palmeiras%2C%2083%20-%20Conj.%20Bela%20Vista%2C%20Rio%20Branco%20-%20AC%2C%2069914-020!5e0!3m2!1spt-BR!2sbr!4v1673374771398!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="horario">
-            <p>
-                <strong>Atendemos</strong><br> Segunda a Sábado das 08 às 18 horas
-            </p>
-            <div class="midias-sociais">
+    <footer class="">
+        <div class="footer-container">
+            <div class="endereco">
                 <p>
-                    <strong>Redes Sociais</strong>
+                    <strong>Endereço</strong><br> Travessa Palmeiras, N° 83 - Bahia Velha
                 </p>
-                <a href=""><i class="fa fa-instagram"></i></a>
-                <a href=""><i class="fa fa-whatsapp"></i></a>
+                <p>
+                    <strong>Telefone</strong><br> (68) 99951-4999
+                </p>
             </div>
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.484496643569!2d-67.83537908521126!3d-9.976777809563053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x917f8dcaaa66f527%3A0x29fcd6e334a45f54!2sTv.%20das%20Palmeiras%2C%2083%20-%20Conj.%20Bela%20Vista%2C%20Rio%20Branco%20-%20AC%2C%2069914-020!5e0!3m2!1spt-BR!2sbr!4v1673374771398!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="horario">
+                <p>
+                    <strong>Atendemos</strong><br> Segunda a Sábado das 08 às 18 horas
+                </p>
+                <div class="midias-sociais">
+                    <p>
+                        <strong>Redes Sociais</strong>
+                    </p>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <a href=""><i class="fa fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom centralizar">
+            <span>Desenvolvido por Jeovane Ferreira</span>
+            <span>Copyright &copy; JS Clean 2023</span>
         </div>
     </footer>
     <script src="js/script.js"></script>

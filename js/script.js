@@ -7,6 +7,7 @@ let modal = document.querySelector('.modal')
 let elementosModal = document.querySelectorAll('.my-img')
 let slideIndex = 1
 
+// FUNÇÃO PARA MOSTRAR O MENU MOBILE
 btnMobile.addEventListener('click', function() {
     let menuMobile = document.querySelector('.menu-mobile')
     if (menuMobile.classList.contains('mostrar-menu-mobile')) {
@@ -27,7 +28,7 @@ btnRight.addEventListener('click', function() {
 function automatic() {
     showSlides(slideIndex += 1)
 }
-
+// FUNÇÃO PARA MOSTRAR OS SLIDES
 function showSlides(index) {
     let slides = document.querySelectorAll('.area-banner')
     if (index > slides.length) {
@@ -45,12 +46,19 @@ function showSlides(index) {
 setInterval(automatic, 7000)
 
 btnClose.addEventListener('click', function() {
-    
     modal.style.display = 'none'
 })
 
+// FUNÇÃO PARA AMPLIAR IMAGENS
 function imgZoom(index) {
     let newImg = elementosModal[index]
     modal.style.display = 'flex'
     modalImg.src = newImg.src
 }
+
+// O CÓDIGO ABAIXO FAZ COM A IMAGEM FECHE A CLICAR NA ÁREA FORA DA IMAGEM
+window.addEventListener('click', function(event) {
+    if (event.target.tagName == 'DIV') {
+        modal.style.display = 'none'
+    }
+})
