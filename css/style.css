@@ -442,6 +442,7 @@ main {
     color: var(--branco);
 }
 .whatsApp-button a img:hover {
+    cursor: pointer;
     transform: scale(110%);
     animation: none;
 }
@@ -463,8 +464,9 @@ footer strong {
     justify-content: space-between;
     padding: 20px 20px 40px;
 }
-.footer-container .endereco p,
-.footer-container .horario p {
+.footer-container .endereco span,
+.footer-container .horario span {
+    display: block;
     margin: 0 0 10px;
 }
 .footer-container .horario .midias-sociais a i {
